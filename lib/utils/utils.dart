@@ -1,2 +1,3 @@
-export 'theme/color.dart';
-export 'theme/text_style.dart';
+export 'theme/colors.dart';
+export 'theme/theme.dart';
+export 'theme/dimens.dart';

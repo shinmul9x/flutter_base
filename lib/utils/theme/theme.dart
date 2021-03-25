@@ -1,5 +1,6 @@
 import 'package:flutter/rendering.dart';
-import 'package:flutter_base/utils/theme/color.dart';
+import 'package:flutter_base/utils/theme/colors.dart';
+import 'package:flutter_base/utils/theme/dimens.dart';
 
 class AppTheme {
   static TextStyle textStyle(
@@ -10,7 +11,7 @@ class AppTheme {
     return TextStyle(
       color: color,
       fontWeight: fontWeight,
-      fontSize: fontSize,
+      fontSize: Dimens.dimen(fontSize),
       decoration: TextDecoration.none,
     );
   }

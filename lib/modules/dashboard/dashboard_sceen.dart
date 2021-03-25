@@ -3,7 +3,11 @@ import 'package:flutter_base/modules/home/home_screen.dart';
 import 'package:flutter_base/modules/notification/notification_screen.dart';
 import 'package:flutter_base/modules/profile/profile_screen.dart';
 
-enum DashboardTab { home, notification, profile }
+enum DashboardTab {
+  home,
+  notification,
+  profile,
+}
 
 extension DashboardTabX on DashboardTab {
   BottomNavigationBarItem get item {
@@ -40,17 +44,22 @@ extension DashboardTabX on DashboardTab {
 
 class DashboardScreen extends StatefulWidget {
   final listTab = DashboardTab.values;
+  final DashboardTab initTab;
+
+  const DashboardScreen({Key? key, this.initTab = DashboardTab.home})
+      : super(key: key);
 
   @override
   _DashboardScreenState createState() => _DashboardScreenState();
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-  DashboardTab _currentTab = DashboardTab.home;
+  late DashboardTab _currentTab;
 
   @override
   void initState() {
     super.initState();
+    _currentTab = widget.initTab;
   }
 
   @override

@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_base/routes.dart';
-import 'package:get/get.dart';
+import 'package:flutter_base/data/providers/shared_preferences/data_provider.dart';
+
+import 'app/app.dart';
 
 void main() {
-  runApp(HogosApp());
-}
+  WidgetsFlutterBinding.ensureInitialized();
+  DataProvider().init();
 
-class HogosApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return GetMaterialApp(
-      initialRoute: RouteName.intitial,
-      onGenerateRoute: generateRoute,
-    );
-  }
+  runApp(MyApp());
 }
