@@ -1,8 +1,7 @@
 import 'package:get/get.dart';
 
 class AppController extends GetxController {
-  void handleException() {
-    //TODO:
-    print('handling');
+  void handleException(Exception e) {
+    Get.defaultDialog();
   }
 }

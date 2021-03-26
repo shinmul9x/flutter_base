@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_base/modules/dashboard/dashboard_sceen.dart';
+import 'package:flutter_base/modules/dashboard/root_sceen.dart';
 import 'package:flutter_base/modules/initial/initial_screen.dart';
 import 'package:flutter_base/modules/login/login_screen.dart';
 import 'package:get/route_manager.dart';
@@ -23,7 +23,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       );
     case RouteName.dashboard:
       return GetPageRoute(
-        page: () => DashboardScreen(),
+        page: () => RootScreen(),
       );
     default:
       return GetPageRoute(
